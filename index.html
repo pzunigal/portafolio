@@ -29,7 +29,7 @@
                         <span class="greeting">Hola, soy</span>
                         <h1>Pablo Zúñiga</h1>
                         <h2>Analista Programador</h2>
-                        <p>Me considero una persona proactiva, creativa, con buena disposición, grandes capacidades de organización, trabajo en equipo, buena resolución de problemas, amplia capacidad de aprendizaje y buen nivel de inglés.</p>
+                        <p>Una persona proactiva, creativa, con buena disposición, grandes capacidades de organización, trabajo en equipo, buena resolución de problemas, amplia capacidad de aprendizaje y buen nivel de inglés.</p>
                         <div class="social-links">
                             <a href="https://github.com/pzunigal" target="_blank">
                                 <i class="fab fa-github"></i>
@@ -54,62 +54,62 @@
             <div class="container">
                 <h2 class="section-title">Habilidades</h2>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <a class="skill-card" href="https://docs.oracle.com/en/java/" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-java"></i>
                         <h3>Java</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-leaf"></i>
                         <h3>Spring Boot</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://dev.mysql.com/doc/" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-database"></i>
                         <h3>MySQL</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-html5"></i>
                         <h3>HTML</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-css3-alt"></i>
                         <h3>CSS</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-js"></i>
                         <h3>JavaScript</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-python"></i>
                         <h3>Python</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-git-alt"></i>
                         <h3>Git</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://docs.github.com/es" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github"></i>
                         <h3>GitHub</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://getbootstrap.com/docs/" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-bootstrap"></i>
                         <h3>Bootstrap</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://es.react.dev/learn" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-react"></i>
                         <h3>React</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-angular"></i>
-                        <h3>Angular</h3>
-                    </div>
-                    <div class="skill-card">
+                    </a>
+                    <a class="skill-card" href="https://nodejs.org/en/docs" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-node-js"></i>
                         <h3>Node.js</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Maven</h3>
-                    </div>
+                    </a>
+                    <a class="skill-card" href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-database"></i>
+                        <h3>PostgreSQL</h3>
+                    </a>
+                    <a class="skill-card" href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-wind"></i>
+                        <h3>TailwindCSS</h3>
+                    </a>
                 </div>
             </div>
         </section>
@@ -179,6 +179,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+function showDoc(skill) {
+    let docs = {
+        "PostgreSQL": "https://www.postgresql.org/docs/",
+        "TailwindCSS": "https://tailwindcss.com/docs"
+    };
+    let names = {
+        "PostgreSQL": "Documentación oficial de PostgreSQL",
+        "TailwindCSS": "Documentación oficial de TailwindCSS"
+    };
+    if (docs[skill]) {
+        document.getElementById('doc-link').innerHTML = 
+            `<a href="${docs[skill]}" target="_blank" style="font-weight:bold; color:#2563eb;">
+                ${names[skill]}
+            </a>`;
+    } else {
+        document.getElementById('doc-link').innerHTML = "";
+    }
+}
+</script>
 </body>
 
 </html>
